@@ -6,4 +6,3 @@ azure-functions
 requests
 azure.identity
 azure.mgmt.resource
-azure-mgmt-support>=0.7.0 --pre

@@ -38,9 +38,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 "problemClassificationId": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/59297240-0228-3915-8fae-553a01974f0b",
                 "severity": "moderate",
                 "contactDetails": {
-                    "firstName": "Troy",
-                    "lastName": "Hite",
-                    "primaryEmailAddress": "troyhite@microsoft.com",
+                    "firstName": "First",
+                    "lastName": "Last",
+                    "primaryEmailAddress": "you@example.com",
                     "preferredSupportLanguage": "en-US",
                     "preferredTimeZone": "Central Standard Time",
                     "country": "US"

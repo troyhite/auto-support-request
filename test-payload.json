@@ -8,7 +8,7 @@
             "monitoringService": "Microsoft.Network/vpnGateways"
         },
         "alertContext": {
-            "resourceId": "/subscriptions/a8d266f9-d825-41e8-aa22-755e2acc6750/resourceGroups/rg-vwam-001/providers/Microsoft.Network/vpnGateways/accf7d8a078d40438a91ac46ef764b0e-centralus-gw",
+            "resourceId": "/subscriptions/<subid>/resourceGroups/rg-vwam-001/providers/Microsoft.Network/vpnGateways/<vpngatewayname>",
             "properties": {
                 "metricName": "Percentage CPU",
                 "metricValue": "90",

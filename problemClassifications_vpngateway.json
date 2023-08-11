@@ -1,0 +1,116 @@
+{
+    "value": [
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/ca409760-7b13-0d7c-9647-a16595cb6875",
+            "name": "ca409760-7b13-0d7c-9647-a16595cb6875",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Configuration and Setup / Configure my on-premises VPN device"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/dee51093-4a4a-7dba-d52c-27e59f0496a5",
+            "name": "dee51093-4a4a-7dba-d52c-27e59f0496a5",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Configuration and Setup / Configure a site-to-site connection"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/4cf6aeba-7f78-5e0e-050b-aef676ede4b6",
+            "name": "4cf6aeba-7f78-5e0e-050b-aef676ede4b6",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Configuration and Setup / Configure a point-to-site Gateway"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/eb75a720-b011-00be-77d5-2dbb2903a46a",
+            "name": "eb75a720-b011-00be-77d5-2dbb2903a46a",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Configuration and Setup / Configure a VNET-to-VNET connection using VPN"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/96670eb7-c6fb-00ba-89c0-60561cc4afac",
+            "name": "96670eb7-c6fb-00ba-89c0-60561cc4afac",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Configuration and Setup / Configure BGP, routing, force tunneling, or NAT"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/1ed231f6-71f9-0f14-fb0a-ce15bca04c53",
+            "name": "1ed231f6-71f9-0f14-fb0a-ce15bca04c53",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Configuration and Setup / Configure a point-to-site client"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/665893b2-2841-85c1-7a16-2525f33cac20",
+            "name": "665893b2-2841-85c1-7a16-2525f33cac20",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Configuration and Setup / Modify local network gateway settings"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/8512ac34-796e-7c4b-0d37-6c5de3624e50",
+            "name": "8512ac34-796e-7c4b-0d37-6c5de3624e50",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Connectivity / Site-to-site VPN connectivity issues"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/c7eadd70-4663-be81-1aba-c89031cd3505",
+            "name": "c7eadd70-4663-be81-1aba-c89031cd3505",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Connectivity / Point-to-site VPN connectivity issues"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/63a47d48-c785-1fbd-c849-477fed7c75ab",
+            "name": "63a47d48-c785-1fbd-c849-477fed7c75ab",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Management / Reset a VPN Gateway"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/ef604a42-ce17-e7e7-7afe-a6116c1d2d62",
+            "name": "ef604a42-ce17-e7e7-7afe-a6116c1d2d62",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Management / Delete a VPN Gateway"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/4e634692-c009-ef4e-d4a7-877d6918841b",
+            "name": "4e634692-c009-ef4e-d4a7-877d6918841b",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Management / Point-to-Site client side issues"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/9eded226-9be0-14a6-581f-eeba3424756f",
+            "name": "9eded226-9be0-14a6-581f-eeba3424756f",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Management / On-premises device configuration script issues"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Support/services/5a813df8-0060-7015-892d-9f17015a6706/problemClassifications/59297240-0228-3915-8fae-553a01974f0b",
+            "name": "59297240-0228-3915-8fae-553a01974f0b",
+            "type": "Microsoft.Support/problemClassifications",
+            "properties": {
+                "displayName": "Performance"
+            }
+        }
+    ]
+}

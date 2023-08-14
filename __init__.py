@@ -2,6 +2,7 @@ import logging
 import os
 import json
 import requests
+import datetime
 import azure.functions as func
 from azure.identity import DefaultAzureCredential
 
@@ -40,17 +41,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 "contactDetails": {
                     "firstName": "First",
                     "lastName": "Last",
-                    "primaryEmailAddress": "you@example.com",
+                    "primaryEmailAddress": "abc@example.com",
                     "preferredSupportLanguage": "en-US",
                     "preferredTimeZone": "Central Standard Time",
                     "country": "US"
                 },
                 "technicalTicketDetails": {
                     "resourceId": alert_resource_id
-                },
-                "properties": {
-                    "alertName": alert_name,
-                    "resourceGroupName": resource_group_name
                 }
             }
         }
@@ -81,6 +78,17 @@ def check_support_ticket_name_availability(subscription_id, support_ticket_name)
         return False
 
 def create_support_ticket(subscription_id, support_ticket_name, support_ticket_payload):
+    # Check if the support ticket name is available
+    support_ticket_name = ''.join(e for e in support_ticket_name if e.isalnum() or e in ['-', '_'])
+    support_ticket_name = support_ticket_name[:64] # limit the length to 64 characters
+    support_ticket_name_available = check_support_ticket_name_availability(subscription_id, support_ticket_name)
+
+    # Add a datestamp to the support ticket name if the name is not available
+    if not support_ticket_name_available:
+        datestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+        support_ticket_name = f"{support_ticket_name}-{datestamp}"
+        logging.info(f"Support ticket name '{support_ticket_name}' is not available. Adding datestamp to the name.")
+
     # Create the support ticket
     credential = DefaultAzureCredential()
     access_token = credential.get_token("https://management.azure.com/.default").token
@@ -88,9 +96,9 @@ def create_support_ticket(subscription_id, support_ticket_name, support_ticket_p
         "Authorization": f"Bearer {access_token}",
         "Content-Type": "application/json"
     }
-    url = f"https://management.azure.com/subscriptions/{subscription_id}/providers/Microsoft.Support/supportTickets/{support_ticket_name}?api-version=2020-04-01"
-    response = requests.post(url, headers=headers, json=support_ticket_payload)
-    if response.status_code == 202:
-        logging.info(f"Support ticket created with name: {support_ticket_payload['properties']['title']}")
+    response = requests.put(f"https://management.azure.com/subscriptions/{subscription_id}/providers/Microsoft.Support/supportTickets/{support_ticket_name}?api-version=2020-04-01", headers=headers, json=support_ticket_payload)
+    if response.status_code == 200:
+        logging.info(f"Support ticket '{support_ticket_name}' created successfully.")
     else:
-        logging.error(f"Failed to create support ticket. Error: {response.text}")
+        logging.error(f"Failed to create support ticket. Status code: {response.status_code}. Response body: {response.text}")
+    # raise an exception or return an error message, depending on your needs

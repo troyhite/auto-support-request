@@ -5,6 +5,8 @@ This Azure Function creates a support ticket in Azure Support based on an Azure 
 - [Support Tickets - Create](https://learn.microsoft.com/en-us/rest/api/support/support-tickets/create?tabs=HTTP)
 - [Check Name Availability](https://learn.microsoft.com/en-us/rest/api/support/support-tickets/check-name-availability?tabs=HTTP)
 
+The current code is specific to Azure Virtual WAN but can be catered to any service supported by utilizing the [Services-List](https://learn.microsoft.com/en-us/rest/api/support/services/list?tabs=HTTP) API. 
+
 ## Prerequisites
 
 - An Azure subscription

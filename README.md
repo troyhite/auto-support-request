@@ -25,4 +25,4 @@ The current code is specific to Azure Virtual WAN but can be catered to any serv
     - AZURE_CLIENT_ID
     - AZURE_CLIENT_SECRET
 - The 'test-payload.json' is an example to use while testing the Function post deployment.
-- The 'problemClassifications_vpngateway.json' gives all the problemClassificationIds for the various support options. These can then be coorelated to the type of ticket being created. That functionality is still in the works.
+- The 'problemClassifications_vpngateway.json' gives all the problemClassificationIds for the various support options. This is currently filtered to only Azure Virtual WAN IDs but using the API above you can pull the IDs for any support category. These can then be coorelated to the type of ticket being created. That functionality is still in the works.

@@ -1,11 +1,14 @@
 import logging
 import os
-import json
 import requests
 import datetime
 import azure.functions as func
 from azure.identity import DefaultAzureCredential
 
+app = func.FunctionApp()
+
+@app.function_name(name="support-ticket-creator")
+@app.route(route="req")
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 

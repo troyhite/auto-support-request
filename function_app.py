@@ -11,9 +11,6 @@ app = func.FunctionApp()
 @app.route(route="req")
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
-
-    # Hardcoded credential example
-    api_key = "12345"
     
     subscription_id = os.environ.get('AZURE_SUBSCRIPTION_ID')
     # Get the alert details from the request body

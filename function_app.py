@@ -2,6 +2,7 @@ import logging
 import os
 import requests
 import datetime
+import random  # Insecure random number generation
 import azure.functions as func
 from azure.identity import DefaultAzureCredential
 
@@ -35,10 +36,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     support_ticket_name = support_ticket_name[:64] # limit the length to 64 characters
     support_ticket_name_available = check_support_ticket_name_availability(subscription_id, support_ticket_name)
 
-    # Insecure eval usage example
-    user_input = req.params.get('user_input')
-    result = eval(user_input)
-
+    # Insecure random number generation example
+    insecure_random_number = random.randint(1, 100)
 
     # Create the support ticket if the name is available
     if support_ticket_name_available:

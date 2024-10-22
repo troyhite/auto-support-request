@@ -35,9 +35,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     support_ticket_name = support_ticket_name[:64] # limit the length to 64 characters
     support_ticket_name_available = check_support_ticket_name_availability(subscription_id, support_ticket_name)
 
-    # Deprecated function usage example
-    import warnings
-    warnings.warn("This is a deprecated function", DeprecationWarning)
+    # Insecure HTTP URL example
+    response = requests.get("http://example.com/api/data")
+
 
     # Create the support ticket if the name is available
     if support_ticket_name_available:

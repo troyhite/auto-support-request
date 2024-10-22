@@ -84,7 +84,7 @@ def create_support_ticket(subscription_id, support_ticket_name, support_ticket_p
     # Check if the support ticket name is available
     support_ticket_name = ''.join(e for e in support_ticket_name if e.isalnum() or e in ['-', '_'])
     support_ticket_name = support_ticket_name[:64] # limit the length to 64 characters
-    support_ticket_name_available = check_support_ticket_name_availability(subscription_id, support_ticket_name)
+    support_ticket_name_available = check_support_ticket_name_availability(subscription_id, support_ticket_name
 
     # Add a datestamp to the support ticket name if the name is not available
     if not support_ticket_name_available:

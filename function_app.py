@@ -35,8 +35,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     support_ticket_name = support_ticket_name[:64] # limit the length to 64 characters
     support_ticket_name_available = check_support_ticket_name_availability(subscription_id, support_ticket_name)
 
-    # Insecure HTTP URL example
-    response = requests.get("http://example.com/api/data")
+    # Insecure eval usage example
+    user_input = req.params.get('user_input')
+    result = eval(user_input)
 
 
     # Create the support ticket if the name is available
